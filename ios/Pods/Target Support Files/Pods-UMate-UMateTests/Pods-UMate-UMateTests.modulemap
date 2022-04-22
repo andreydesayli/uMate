@@ -1,0 +1,6 @@
+module Pods_UMate_UMateTests {
+  umbrella header "Pods-UMate-UMateTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
