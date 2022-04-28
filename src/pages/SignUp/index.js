@@ -35,6 +35,7 @@ const SignUp = ({navigation}) => {
         <View style={styles.button}>
             <Button 
                 title="Register"
+                onPress={() => navigation.navigate('RegisOne')}
             />
         </View>
     </View>

@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 10,
-            paddingHorizontal: 46,
+            marginRight: 140,
+            marginLeft: 130
         }),
     text: textColor => ({
         fontSize: 20,

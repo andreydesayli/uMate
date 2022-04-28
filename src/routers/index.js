@@ -1,5 +1,5 @@
 import React from 'react'
-import { SplashScreen, SignIn, SignUp } from '../pages'
+import { SplashScreen, SignIn, SignUp, RegisOne, RegisTwo } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator();
@@ -7,10 +7,20 @@ const Stack = createNativeStackNavigator();
 const index = () => {
   return (
    <Stack.Navigator screenOptions={{ headerShown: false }}>
-       <Stack.Screen
+     <Stack.Screen 
+        name="RegisOne"
+        component={RegisOne}
+       />
+       <Stack.Screen 
+        name="RegisTwo"
+        component={RegisTwo}
+       />
+     <Stack.Screen
          name="SplashScreen"
          component={SplashScreen}
        />
+     
+       
        <Stack.Screen 
          name="SignIn"
          component={SignIn}
@@ -19,6 +29,7 @@ const index = () => {
         name="SignUp"
         component={SignUp}
        />
+       
    </Stack.Navigator>
   )
 }
