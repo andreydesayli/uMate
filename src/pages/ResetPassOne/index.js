@@ -23,20 +23,20 @@ const ResetPassOne = ({navigation, title='Reset Password', onBack}) => {
     <Gap width={20} />
     <Text style={styles.text}>{title}</Text>
   </View>
-  <Gap height={20} />
+  <Gap height={33} />
   <View style={{flexDirection: 'row'}}>
   <Gap width={39} />
   <ResetInfo />
   <Text style={styles.text4}>Use SIU account to reset your password</Text>
   </View>
   
-  <Gap height={20} />
-  <Text style={styles.text3}>Register Number</Text>
-  <TextInput mL={40} mR={40}  placeholder='   S12345678'></TextInput>
-  <Gap height={20} />
-  <Text style={styles.text3}>Password</Text>
-  <TextInput mL={40} mR={40}  placeholder='   *****'></TextInput>
-  <Gap height={50} />
+  <Gap height={34} />
+  <View style={styles.text3}>
+    <TextInput title='Register Number' placeholder='   S12345678'></TextInput>
+    <Gap height={26} />
+    <TextInput title='Password' placeholder='   *****'></TextInput>
+  </View>
+  <Gap height={61} />
   <Button mL={120} mR={120} style={styles.button1} title={'Next'} onPress={() => navigation.navigate('ResetPass')}>Next</Button>
   </View>
 
@@ -48,13 +48,12 @@ export default ResetPassOne
 const styles = StyleSheet.create({
     headerWrapper: {
         backgroundColor: '#D3D3D380',
-        paddingBottom: 21,
         flexDirection: 'row',
-        alignItems: 'center'
     },
     iconBack:{
         marginLeft: 15,
-        paddingTop: 42,
+        marginTop: 42,
+        marginBottom: 21,
     },
     back:{
         padding: 10,
@@ -63,13 +62,14 @@ const styles = StyleSheet.create({
         fontSize: 35, 
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        paddingTop: 35,
+        marginTop: 45,
     },
     text3: {
         fontSize: 15,
-        fontFamily: 'Roboto-Bold',
+        fontFamily: 'Roboto-SemiBold',
         color: 'black',
-        marginLeft: 40,
+        marginLeft: 81,
+        marginRight: 73,
     },
     text4: {
         fontSize: 15,
