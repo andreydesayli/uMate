@@ -6,16 +6,16 @@ import { IconBack, User } from '../../assets/icons'
 const RegisOne = ({navigation, title='Registration', onBack}) => {
   return (
     <View style={styles.container}>
+      {onBack && (
+      <TouchableOpacity  onPress={onBack} activeOpacity={0.7}>
+        <View style={styles.back}>
+        <IconBack />
+       </View>
+      </TouchableOpacity>
+     )}
         <View style={styles.headerWrapper}>
-        {onBack && (
-         <TouchableOpacity onPress={onBack} activeOpacity={0.7}>
-           <View style={styles.back}>
-             
-          </View>
-        </TouchableOpacity>
         
-      )}
-      <IconBack />
+      
       <Gap width={20} />
       <Text style={styles.text}>{title}</Text>
       
@@ -30,7 +30,7 @@ const RegisOne = ({navigation, title='Registration', onBack}) => {
       <User width={113} height={115} style={{marginLeft: 145}}/>
       <Gap height={30} />
       <Text style={styles.text3}>Birthdate</Text>
-      <TextInput></TextInput>
+      <TextInput  mL={40} mR={250}></TextInput>
       <Gap height={20} />
       <Text style={styles.text3}>Gender</Text>
       <Gap height={10} />
@@ -40,7 +40,7 @@ const RegisOne = ({navigation, title='Registration', onBack}) => {
       
       </View>
       <Gap height={20} />
-      <Button style={styles.button1} title={'Next'} onPress={() => navigation.navigate('RegisTwo')}>Next</Button>
+      <Button mL={120} mR={120} style={styles.button1} title={'Next'} onPress={() => navigation.navigate('RegisTwo')}>Next</Button>
       <Gap height={25} />
       <View style={styles.border1} />
     </View>
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
         width: 311,
         borderBottomWidth: 10,
         borderColor: '#554CCD',
-        borderRadius: 10
+        borderRadius: 10,
+        
     }, 
 })

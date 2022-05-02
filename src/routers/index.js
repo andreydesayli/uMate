@@ -1,5 +1,5 @@
 import React from 'react'
-import { SplashScreen, SignIn, SignUp, RegisOne, RegisTwo } from '../pages'
+import { SplashScreen, SignIn, SignUp, RegisOne, RegisTwo, RegisThree } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator();
@@ -11,10 +11,18 @@ const index = () => {
         name="RegisOne"
         component={RegisOne}
        />
-       <Stack.Screen 
+     <Stack.Screen 
         name="RegisTwo"
         component={RegisTwo}
        />
+     <Stack.Screen 
+        name="RegisThree"
+        component={RegisThree}
+       />
+     
+     
+       
+       
      <Stack.Screen
          name="SplashScreen"
          component={SplashScreen}

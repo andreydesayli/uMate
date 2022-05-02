@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, {useState}  from 'react'
 import { Button, TextInput, Gap } from '../../components'
 import { IconBack, User } from '../../assets/icons'
+import RNPickerSelect from 'react-native-picker-select';
 
 const RegisTwo = ({navigation, title='Registration', onBack}) => {
   return (
@@ -22,14 +23,32 @@ const RegisTwo = ({navigation, title='Registration', onBack}) => {
       
            
         </View>
-        <Gap height={10} />
+        <Gap height={30} />
       <Text style={styles.text3}>Faculty</Text>
-      <TextInput></TextInput>
-      <Gap height={20} />
+      <TextInput mL={40} mR={40} placeholder='  Faculty of..'></TextInput>
+      <Gap height={30} />
       <Text style={styles.text3}>Semester</Text>
-      <TextInput></TextInput>
-      <Gap height={20} />
-      <Button style={styles.button1} title={'Next'} onPress={() => navigation.navigate('RegisTwo')}>Next</Button>
+      <TextInput mL={40} mR={40} placeholder='  6th'></TextInput>
+      <Gap height={30} />
+      <Text style={styles.text3}>Position</Text>
+      <RNPickerSelect
+            placeholder={{
+              label: 'Student',
+              value: 'Student',
+              
+            }}
+            onValueChange={(value) => console.log()}
+            items={[
+                { label: 'Lecturer', value: 'Lecturer' },
+                { label: 'Staff', value: 'Staff' },
+            ]}
+            style={
+                pickerSelectStyles.inputAndroid
+            }
+        />
+      
+      <Gap height={50} />
+      <Button mL={120} mR={120} title={'Next'} onPress={() => navigation.navigate('RegisThree')}>Next</Button>
       <Gap height={25} />
       <View style={styles.border1} />
     </View>
@@ -68,7 +87,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 50
+        marginLeft: 40
     },
     border: {
         left: 45,
@@ -84,3 +103,26 @@ const styles = StyleSheet.create({
         borderRadius: 10
     }, 
 })
+
+const pickerSelectStyles = StyleSheet.create({
+  inputIOS: {
+    fontSize: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 4,
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+  },
+  inputAndroid: {
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 0.5,
+    borderColor: 'purple',
+    borderRadius: 8,
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+  },
+});
