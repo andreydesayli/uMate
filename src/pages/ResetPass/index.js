@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { IconBack } from '../../assets/icons'
 import { Button, TextInput, Gap } from '../../components'
@@ -14,7 +14,11 @@ const ResetPass = ({navigation, title='Reset Password', onBack}) => {
         </View>
         </TouchableOpacity>
         )}
-    <IconBack />
+    <TouchableOpacity activeOpacity={0.7}>
+        <IconBack 
+        onPress={() => navigation.navigate('ResetPassOne')}
+        />
+    </TouchableOpacity>
     <Gap width={20} />
     <Text style={styles.text}>{title}</Text>
   </View>
@@ -25,7 +29,7 @@ const ResetPass = ({navigation, title='Reset Password', onBack}) => {
   <Text style={styles.text3}>Confirm Password</Text>
   <TextInput mL={40} mR={40}  placeholder='  *****'></TextInput>
   <Gap height={50} />
-  <Button mL={120} mR={120} style={styles.button1} title={'Save'} onPress={() => navigation.navigate('')}>Next</Button>
+  <Button mL={120} mR={120} style={styles.button1} title={'Save'} onPress={() => navigation.navigate('SignIn')}>Next</Button>
   </View>
 
   )

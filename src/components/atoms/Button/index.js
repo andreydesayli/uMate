@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
             backgroundColor: color,
             alignItems: 'center',
             justifyContent: 'center',
-            borderRadius: 20,
+            borderRadius: 10,
             marginLeft: mL,
-            marginRight: mR
+            marginRight: mR,
         }),
     text: textColor => ({
-        fontSize: 16,
+        fontSize: 20,
         fontFamily: 'Roboto-Bold',
         color: textColor,
-
+        marginHorizontal: 46,
     }),
 })

@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Button, TextInput, Gap } from '../../components'
-import { G } from 'react-native-svg'
 
 const SignIn = ({navigation}) => {
   return (
@@ -9,7 +8,6 @@ const SignIn = ({navigation}) => {
       <View style={styles.headerWrapper}>
         <Button
           title="Sign in"
-
         />
         <Button 
           title="Sign up"
@@ -21,16 +19,20 @@ const SignIn = ({navigation}) => {
       <View style={styles.input} >
         <TextInput 
           title = "Register Number"
-          placeholder= "S12345678"
+          placeholder= "   S12345678"
         />
         <Gap height={30} />
         <TextInput 
           title= "Password"
-          placeholder= "*****"
+          placeholder= "   *****"
         />
       </View>
       <TouchableOpacity>
-       <Text style={styles.text} activeOpacity={0.7}>Forgot password?</Text>
+       <Text 
+        style={styles.text} 
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('ResetPassOne')}
+        >Forgot password?</Text>
       </TouchableOpacity>
       <View style={styles.button}>
         <Button 

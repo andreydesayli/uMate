@@ -15,7 +15,9 @@ const RegisTwo = ({navigation, title='Registration', onBack}) => {
         </TouchableOpacity>
         
       )}
-      <IconBack />
+      <IconBack 
+      onPress={() => navigation.navigate('RegisTwo')}
+      />
       <Gap width={20} />
       <Text style={styles.text}>{title}</Text>
       
@@ -53,7 +55,7 @@ const RegisTwo = ({navigation, title='Registration', onBack}) => {
       
       <TextInput mL={40} mR={220} placeholder=' Others'></TextInput>
       <Gap height={40} />
-      <Button mL={120} mR={120} style={styles.button1} title={'Done'} onPress={() => navigation.navigate('RegisThree')}>Next</Button>
+      <Button mL={120} mR={120} style={styles.button1} title={'Done'} onPress={() => navigation.navigate('SplashScreen')}>Next</Button>
       <Gap height={25} />
       <View style={styles.border1} />
       

@@ -14,25 +14,30 @@ const ResetPassOne = ({navigation, title='Reset Password', onBack}) => {
         </View>
         </TouchableOpacity>
         )}
-    <IconBack />
+    <View style={styles.iconBack} >
+        <IconBack 
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('SignIn')} 
+        />
+    </View>
     <Gap width={20} />
     <Text style={styles.text}>{title}</Text>
   </View>
   <Gap height={20} />
   <View style={{flexDirection: 'row'}}>
-  <Gap width={20} />
+  <Gap width={39} />
   <ResetInfo />
   <Text style={styles.text4}>Use SIU account to reset your password</Text>
   </View>
   
   <Gap height={20} />
   <Text style={styles.text3}>Register Number</Text>
-  <TextInput mL={40} mR={40}  placeholder='  S12345678'></TextInput>
+  <TextInput mL={40} mR={40}  placeholder='   S12345678'></TextInput>
   <Gap height={20} />
   <Text style={styles.text3}>Password</Text>
-  <TextInput mL={40} mR={40}  placeholder='  *****'></TextInput>
+  <TextInput mL={40} mR={40}  placeholder='   *****'></TextInput>
   <Gap height={50} />
-  <Button mL={120} mR={120} style={styles.button1} title={'Next'} onPress={() => navigation.navigate('')}>Next</Button>
+  <Button mL={120} mR={120} style={styles.button1} title={'Next'} onPress={() => navigation.navigate('ResetPass')}>Next</Button>
   </View>
 
   )
@@ -43,10 +48,13 @@ export default ResetPassOne
 const styles = StyleSheet.create({
     headerWrapper: {
         backgroundColor: '#D3D3D380',
-        paddingTop: 40,
-        paddingBottom: 33,
+        paddingBottom: 21,
         flexDirection: 'row',
         alignItems: 'center'
+    },
+    iconBack:{
+        marginLeft: 15,
+        paddingTop: 42,
     },
     back:{
         padding: 10,
@@ -55,18 +63,18 @@ const styles = StyleSheet.create({
         fontSize: 35, 
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 20
+        paddingTop: 35,
     },
     text3: {
         fontSize: 15,
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 40
+        marginLeft: 40,
     },
     text4: {
         fontSize: 15,
-        fontFamily: 'Roboto-Bold',
-        color: 'red',
+        fontFamily: 'Roboto-Regular',
+        color: '#7A0505',
         marginLeft: 10
     },
 })

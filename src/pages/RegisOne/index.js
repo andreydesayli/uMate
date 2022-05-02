@@ -8,21 +8,20 @@ const RegisOne = ({navigation, title='Registration', onBack}) => {
     <View style={styles.container}>
       {onBack && (
       <TouchableOpacity  onPress={onBack} activeOpacity={0.7}>
-        <View style={styles.back}>
-        <IconBack />
-       </View>
+        
       </TouchableOpacity>
      )}
-        <View style={styles.headerWrapper}>
-        
-      
+      <View style={styles.headerWrapper}>
       <Gap width={20} />
+      <TouchableOpacity activeOpacity={0.7}>
+        <IconBack 
+        onPress={() => navigation.navigate('SignUp')}
+        />
+      </TouchableOpacity>
       <Text style={styles.text}>{title}</Text>
-      
-      
-           
-        </View>
-        <Gap height={30} />
+      </View>
+
+      <Gap height={30} />
       <Text style={styles.text2}>Welcome, John Doe</Text>
       <Gap height={10} />
       <View style={styles.border} />
@@ -60,9 +59,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
-    back:{
-        padding: 10,
-    }, 
     text: {
         fontSize: 35, 
         fontFamily: 'Roboto-Bold',

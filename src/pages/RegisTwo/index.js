@@ -16,7 +16,9 @@ const RegisTwo = ({navigation, title='Registration', onBack}) => {
         </TouchableOpacity>
         
       )}
-      <IconBack />
+      <IconBack 
+      onPress={() => navigation.navigate('RegisOne')}
+      />
       <Gap width={20} />
       <Text style={styles.text}>{title}</Text>
       

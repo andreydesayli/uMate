@@ -6,8 +6,20 @@ const Stack = createNativeStackNavigator();
 
 const index = () => {
   return (
-   <Stack.Navigator screenOptions={{ headerShown: false }}>
-   <Stack.Screen 
+   <Stack.Navigator screenOptions={{ headerShown: false }}>    
+     <Stack.Screen
+         name="SplashScreen"
+         component={SplashScreen}
+       />
+       <Stack.Screen 
+         name="SignIn"
+         component={SignIn}
+       />
+       <Stack.Screen 
+        name="SignUp"
+        component={SignUp}
+       />
+       <Stack.Screen 
         name="ResetPassOne"
         component={ResetPassOne}
        />
@@ -28,24 +40,6 @@ const index = () => {
         component={RegisThree}
        />
      
-     
-       
-       
-     <Stack.Screen
-         name="SplashScreen"
-         component={SplashScreen}
-       />
-     
-       
-       <Stack.Screen 
-         name="SignIn"
-         component={SignIn}
-       />
-       <Stack.Screen 
-        name="SignUp"
-        component={SignUp}
-       />
-       
    </Stack.Navigator>
   )
 }

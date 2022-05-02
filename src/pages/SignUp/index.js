@@ -19,17 +19,17 @@ const SignUp = ({navigation}) => {
         <View style={styles.input}>
             <TextInput 
                 title="Register Number"
-                placeholder="S12345678"
+                placeholder="   S12345678"
             />
             <Gap height={30} />
             <TextInput 
                 title="Username"
-                placeholder="Username"
+                placeholder="   Username"
             />
             <Gap height={30} />
             <TextInput 
                 title="Password"
-                placeholder="*****"
+                placeholder="   *****"
             />
         </View>
         <View style={styles.button}>
