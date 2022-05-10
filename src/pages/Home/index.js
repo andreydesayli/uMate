@@ -8,6 +8,7 @@ import {styles} from './styles';
 import {RoundButton} from '../../components';
 import MenuSetting from '../../components/atoms/MenuSetting';
 
+// home untuk tampilan awal dalam app yang berisi card yg dapat diswipe
 export default function Home() {
   const [photo, setPhotos] = useState(photoArray);
   const swipe = useRef(new Animated.ValueXY()).current;

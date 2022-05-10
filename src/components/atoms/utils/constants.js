@@ -8,7 +8,7 @@ export const CARD = {
   BORDER_RADIUS: 40,
   OUT_OF_SCREEN: width + 0.5 * width,
 };
-
+// utils untuk menampilkan nope dan like di depan foto
 export const COLORS = {
   like: '#00eda6',
   nope: '#ff006f',
