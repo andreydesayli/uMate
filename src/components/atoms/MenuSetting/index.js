@@ -24,24 +24,10 @@ export default MenuSetting;
 
 const styles = StyleSheet.create({
   container1: {
-    // paddingLeft: 20,
-    // paddingVertical: 20,
-    // paddingRight: 80,
-    // backgroundColor: '#02CF8E',
-    // paddingHorizontal: 20,
-    // flex: 2,
-    // // weight: 20,
     top: -320,
     left: 130,
   },
   container2: {
-    // paddingLeft: 20,
-    // paddingVertical: 20,
-    // paddingRight: 80,
-    // backgroundColor: '#02CF8E',
-    // paddingHorizontal: 20,
-    // flex: 2,
-    // // weight: 20,
     top: -350,
     left: 170,
   },
