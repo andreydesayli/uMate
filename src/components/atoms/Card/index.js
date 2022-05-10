@@ -1,3 +1,5 @@
+// Component untuk Card dalam Home untuk foto, nama, umur, dan description
+
 import {Animated, Image, Text, View} from 'react-native';
 import React, {useCallback} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
