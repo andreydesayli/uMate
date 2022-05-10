@@ -1,4 +1,8 @@
 import Button from "./Button";
 import TextInput from "./TextInput";
 import Gap from "./Gap";
-export {Button, TextInput, Gap};
+import RoundButton from "./RoundButton";
+
+export * from './utils/constants';
+
+export {Button, TextInput, Gap, RoundButton};
