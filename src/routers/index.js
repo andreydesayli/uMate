@@ -1,6 +1,7 @@
 import React from 'react'
 import { SplashScreen, Home, SignIn, SignUp, RegisOne, RegisTwo, RegisThree, ResetPass, ResetPassOne } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import TabsNav from '../TabsNav';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,8 +41,8 @@ const index = () => {
         component={RegisThree}
        />
      <Stack.Screen
-        name="Home"
-        component={Home}
+        name="tabsNav"
+        component={TabsNav}
        />
    </Stack.Navigator>
   )
