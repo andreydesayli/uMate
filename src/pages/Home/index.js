@@ -19,7 +19,7 @@ export default function Home({navigation}) {
       setPhotos(photoArray);
     }
   }, [photo.length]);
-
+// swipe card
   const panResponder = PanResponder.create({
     onMoveShouldSetPanResponder: () => true,
     onPanResponderMove: (_, {dx, dy, y0}) => {
@@ -56,7 +56,7 @@ export default function Home({navigation}) {
     setPhotos(prevState => prevState.slice(1));
     swipe.setValue({x: 0, y: 0});
   }, [swipe]);
-
+// looping
   const handleChoice = useCallback(
     direction => {
       Animated.timing(swipe.x, {

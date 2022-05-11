@@ -27,7 +27,7 @@ export default function Card({
     outputRange: [0, 1],
     extrapolate: 'clamp',
   });
-
+// nope bentuk
   const nopeOpacity = swipe.x.interpolate({
     inputRange: [-ACTION_OFFSET, -15],
     outputRange: [1, 0],
@@ -63,6 +63,7 @@ export default function Card({
 
   return (
     <>
+    {/* // Header */}
       <Text style={styles.cym}>Choose your mate</Text>
 
       <Animated.View

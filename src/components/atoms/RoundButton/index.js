@@ -35,6 +35,7 @@ export default function RoundButton({name, size, onPress, handleChoice}) {
         // {/* style={styles.buttonLike} */}
         onPressIn={() => animateScale(0.8)}
         delayPressIn={0}
+        // agar ketika tekan tombol like bisa swipe foto.
         onPress={() => handleChoice(1)} //untuk tombol like jadi ba swipe
         onPressOut={() => {
           animateScale(1);
