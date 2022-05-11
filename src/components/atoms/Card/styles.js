@@ -1,3 +1,5 @@
+// Style Card
+
 import {StyleSheet} from 'react-native';
 import {CARD} from '../utils/constants';
 

@@ -24,20 +24,14 @@ export default EDButton;
 
 const styles = StyleSheet.create({
   container1: {
-    // paddingLeft: 20,
-    // paddingVertical: 20,
-    // paddingRight: 80,
     backgroundColor: '#02CF8E',
     paddingHorizontal: 20,
     flex: 1,
     weight: 20,
     top: -400,
   },
-  // eslint-disable-next-line no-dupe-keys
   container2: {
     paddingLeft: 320,
-    // paddingVertical: 20,
-    // paddingRight: 80,
     backgroundColor: '#02CF8E',
     paddingHorizontal: 20,
     flex: 1,

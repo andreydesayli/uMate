@@ -30,7 +30,7 @@ const ResetPass = ({navigation, title='Reset Password', onBack}) => {
     <TextInput title='Confirm Password' placeholder='  *****'></TextInput>
   </View>
   <Gap height={61} />
-  <Button mL={120} mR={120} style={styles.button1} title={'Save'} onPress={() => navigation.navigate('SignIn')}>Next</Button>
+  <Button mL={20} mR={20} style={styles.button1} title={'Submit'} onPress={() => navigation.navigate('Help')}>Submit</Button>
   </View>
 
   )

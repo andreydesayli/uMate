@@ -1,3 +1,4 @@
+// import foto untuk card dalam home
 export const photo = [
     {
       name: 'Vantae, 21',
