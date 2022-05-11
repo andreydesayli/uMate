@@ -1,5 +1,5 @@
 import React from 'react'
-import { SplashScreen, Home, SignIn, SignUp, RegisOne,
+import { SplashScreen, Filter, Home, SignIn, SignUp, RegisOne,
    RegisTwo, RegisThree, ResetPass, ResetPassOne,
   Settings, Privacy, Help } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -9,6 +9,10 @@ const Stack = createNativeStackNavigator();
 const index = () => {
   return (
    <Stack.Navigator screenOptions={{ headerShown: false }}>    
+     <Stack.Screen
+         name="Filter"
+         component={Filter} 
+       />
      <Stack.Screen
          name="SplashScreen"
          component={SplashScreen}
