@@ -11,16 +11,16 @@ const index = () => {
   return (
    <Stack.Navigator screenOptions={{ headerShown: false }}>    
      <Stack.Screen
-         name="Filter"
-         component={Filter} 
-       />
-     <Stack.Screen
          name="SplashScreen"
          component={SplashScreen}
        />
        <Stack.Screen 
          name="SignIn"
          component={SignIn}
+       />
+        <Stack.Screen
+         name="Filter"
+         component={Filter} 
        />
        <Stack.Screen 
         name="SignUp"

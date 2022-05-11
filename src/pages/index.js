@@ -13,11 +13,11 @@ import Profile from "./Profile";
 import Settings from "./Settings";
 import Privacy from "./Privacy";
 import Help from "./Help";
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import Report from "./Report";
-=======
+// =======
 import Filter from "./Filter";
->>>>>>> 882c66b6d9f107f2d5c674be745d325767c1a134
+// >>>>>>> 882c66b6d9f107f2d5c674be745d325767c1a134
 
 export {SplashScreen, Filter, Home, Notif, Chat, Profile, SignIn, SignUp, RegisOne, 
     RegisTwo, RegisThree, ResetPass, ResetPassOne,
