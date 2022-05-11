@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {StyleSheet, View, Image} from 'react-native';
-import { Chat, Home, Notif, Profile } from '../pages';
+import { Chat, Home, Notification, Profile } from '../pages';
 import { iChat, iHome, iNotif, iProfile } from '../assets';
 
 const Tab = createBottomTabNavigator();
@@ -33,8 +33,8 @@ const TabsNav = ({navigation}) => {
         }}
       />
       <Tab.Screen
-        name="Notif"
-        component={Notif}
+        name="Notification"
+        component={Notification}
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (

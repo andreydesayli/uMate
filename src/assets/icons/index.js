@@ -21,5 +21,6 @@ import send from './send.png';
 import mic from './mic.png';
 import goBack from './goBack.png';
 import active from './Active.png';
+import IconMatch from './IconMatch.svg'
 
-export {Delete, Add,active, goBack, send, mic, setting, filter, iChat, iProfile, iNotif, iHome, Close, Logo, Plus, Umate, IconBack, User, ResetInfo, Line, RadioChecked, RadioUnchecked, Heart};
+export {IconMatch, Delete, Add,active, goBack, send, mic, setting, filter, iChat, iProfile, iNotif, iHome, Close, Logo, Plus, Umate, IconBack, User, ResetInfo, Line, RadioChecked, RadioUnchecked, Heart};

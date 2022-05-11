@@ -6,12 +6,12 @@ import ChatInput from './input';
 import {Gap} from '../../components';
 import DisplayChat from '../../components/DisplayChat';
 
-const Chat = ({username, bio, picture, onPress}) => {
+const Chat = ({navigation, username, bio, picture, onPress}) => {
   return (
     <>
       <>
         <View style={styles.container}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
             <Image style={styles.image} source={goBack} />
           </TouchableOpacity>
           <Image style={styles.imageV} source={V} />

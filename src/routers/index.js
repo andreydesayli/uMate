@@ -1,7 +1,7 @@
 import React from 'react'
 import { SplashScreen, Filter, Home, SignIn, SignUp, RegisOne,
    RegisTwo, RegisThree, ResetPass, ResetPassOne,
-  Settings, Privacy, Help, Report } from '../pages'
+  Settings, Privacy, Help, Report, Notification, Match, Chat } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import TabsNav from '../TabsNav';
 
@@ -66,7 +66,18 @@ const index = () => {
         name="Report"
         component={Report}
         />
-
+        <Stack.Screen
+        name="Notification"
+        component={Notification}
+        />
+        <Stack.Screen
+        name="Match"
+        component={Match}
+        />
+        <Stack.Screen
+        name="Chat"
+        component={Chat}
+        />
    </Stack.Navigator>
   )
 }
