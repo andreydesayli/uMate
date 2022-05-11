@@ -1,5 +1,7 @@
 import React from 'react'
-import { SplashScreen, Home, SignIn, SignUp, RegisOne, RegisTwo, RegisThree, ResetPass, ResetPassOne } from '../pages'
+import { SplashScreen, Home, SignIn, SignUp, RegisOne,
+   RegisTwo, RegisThree, ResetPass, ResetPassOne,
+  Settings, Privacy, Help } from '../pages'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +45,19 @@ const index = () => {
         name="Home"
         component={Home}
        />
+       <Stack.Screen
+        name="Settings"
+        component={Settings}
+        />
+               <Stack.Screen
+        name="Privacy"
+        component={Privacy}
+        />
+               <Stack.Screen
+        name="Help"
+        component={Help}
+        />
+
    </Stack.Navigator>
   )
 }

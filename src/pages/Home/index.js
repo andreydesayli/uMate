@@ -1,4 +1,4 @@
-import {Animated, View, PanResponder} from 'react-native';
+import {Animated, View, PanResponder, TouchableOpacity} from 'react-native';
 import React, {useState, useRef, useCallback, useEffect} from 'react';
 import {photo as photoArray} from './data';
 import {CARD} from '../../components';
@@ -9,7 +9,7 @@ import {RoundButton} from '../../components';
 import MenuSetting from '../../components/atoms/MenuSetting';
 
 // home untuk tampilan awal dalam app yang berisi card yg dapat diswipe
-export default function Home() {
+export default function Home({navigation}) {
   const [photo, setPhotos] = useState(photoArray);
   const swipe = useRef(new Animated.ValueXY()).current;
   const tiltSign = useRef(new Animated.Value(1)).current;
@@ -93,7 +93,12 @@ export default function Home() {
             })
             .reverse()}
           <RoundButton handleChoice={handleChoice} />
-          <MenuSetting />
+          <TouchableOpacity activeOpacity={0.7}>
+        <MenuSetting 
+        onPress={() => navigation.navigate('Settings')}
+        />
+      </TouchableOpacity>
+
         </View>
       </View>
     </>
