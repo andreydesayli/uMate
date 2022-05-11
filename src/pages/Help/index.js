@@ -1,17 +1,21 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Gap } from '../../components/atoms'
+import { IconBack } from '../../assets'
 
-const Help = () => {
+const Help = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
+            <TouchableOpacity>
+            <IconBack onPress={() => navigation.navigate('Settings')}>Settings</IconBack> 
+            </TouchableOpacity>
             <Text style={styles.text}>Help</Text>
             </View>
             <Gap height={25}/>
             <View style={styles.border}/>
             <TouchableOpacity>
-            <Text style={styles.text1}>Report</Text>
+            <Text style={styles.text1} onPress={() => navigation.navigate('Report')}>Report</Text> 
             </TouchableOpacity>
             <View style={styles.border}/>
             <TouchableOpacity>

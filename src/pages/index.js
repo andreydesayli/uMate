@@ -13,7 +13,8 @@ import Profile from "./Profile";
 import Settings from "./Settings";
 import Privacy from "./Privacy";
 import Help from "./Help";
+import Report from "./Report";
 
 export {SplashScreen, Home, Notif, Chat, Profile, SignIn, SignUp, RegisOne, 
     RegisTwo, RegisThree, ResetPass, ResetPassOne,
-    Settings, Privacy, Help};
+    Settings, Privacy, Help, Report};

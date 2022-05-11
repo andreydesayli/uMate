@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View, TouchableOpacity, Switch} from 'react-native'
 import React from 'react'
 import { Gap, Toggle } from '../../components/atoms'
+import { IconBack } from '../../assets'
 
 const Privacy = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-            {/* Add goBack icon */}
+            <TouchableOpacity>
+            <IconBack onPress={() => navigation.navigate('Settings')}>Setting</IconBack> 
+            </TouchableOpacity>
             <Text style={styles.text}>Privacy</Text>
             </View>
             <Gap height={25}/>
