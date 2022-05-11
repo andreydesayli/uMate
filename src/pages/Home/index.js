@@ -94,7 +94,7 @@ export default function Home({navigation}) {
             .reverse()}
           <RoundButton handleChoice={handleChoice} />
           <TouchableOpacity activeOpacity={0.7}>
-        <MenuSetting 
+        <MenuSetting   
         onPress={() => navigation.navigate('Settings')}
         />
       </TouchableOpacity>

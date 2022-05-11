@@ -6,6 +6,7 @@ const Privacy = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
+            {/* Add goBack icon */}
             <Text style={styles.text}>Privacy</Text>
             </View>
             <Gap height={25}/>
