@@ -7,6 +7,7 @@ import Card from '../../components/atoms/Card';
 import {styles} from './styles';
 import {RoundButton} from '../../components';
 import MenuSetting from '../../components/atoms/MenuSetting';
+import MenuFilter from '../../components/atoms/MenuFilter';
 
 // home untuk tampilan awal dalam app yang berisi card yg dapat diswipe
 export default function Home({navigation}) {
@@ -93,6 +94,11 @@ export default function Home({navigation}) {
             })
             .reverse()}
           <RoundButton handleChoice={handleChoice} />
+          <TouchableOpacity activeOpacity={0.7}>
+        <MenuFilter
+        onPress={() => navigation.navigate('Filter')}
+        />
+      </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.7}>
         <MenuSetting   
         onPress={() => navigation.navigate('Settings')}

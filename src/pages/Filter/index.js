@@ -32,7 +32,7 @@ const Filter = ({navigation, onBack}) => {
       <Gap width={20} />
       <TouchableOpacity activeOpacity={0.7}>
         <IconBack 
-        onPress={() => navigation.navigate('SignUp')}
+        onPress={() => navigation.navigate('Home')}
         />
       </TouchableOpacity>
       <Text style={styles.text}>Filter</Text>

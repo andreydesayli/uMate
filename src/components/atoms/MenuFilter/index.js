@@ -3,7 +3,7 @@ import {TouchableOpacity, View, Image, StyleSheet} from 'react-native';
 //import {styles} from './styles';
 import {filter} from '../../../assets';
 
-const MenuSetting = ({title, color = '#02CF8E', onPress}) => {
+const MenuFilter = ({title, color = '#02CF8E', onPress}) => {
   return (
     <>
       <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
@@ -15,7 +15,7 @@ const MenuSetting = ({title, color = '#02CF8E', onPress}) => {
   );
 };
 
-export default MenuSetting;
+export default MenuFilter;
 
 const styles = StyleSheet.create({
   container1: {

@@ -17,5 +17,9 @@ import filter from './filter.png';
 import setting from './settings.png';
 import Delete from './delete.png';
 import Add from './add.png';
+import send from './send.png';
+import mic from './mic.png';
+import goBack from './goBack.png';
+import active from './Active.png';
 
-export {Delete, Add, setting, filter, iChat, iProfile, iNotif, iHome, Close, Logo, Plus, Umate, IconBack, User, ResetInfo, Line, RadioChecked, RadioUnchecked, Heart};
+export {Delete, Add,active, goBack, send, mic, setting, filter, iChat, iProfile, iNotif, iHome, Close, Logo, Plus, Umate, IconBack, User, ResetInfo, Line, RadioChecked, RadioUnchecked, Heart};
