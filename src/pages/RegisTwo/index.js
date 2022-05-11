@@ -4,43 +4,35 @@ import { Button, TextInput, Gap } from '../../components'
 import { IconBack, User } from '../../assets/icons'
 import RNPickerSelect from 'react-native-picker-select';
 
-const RegisTwo = ({navigation, title='Registration', onBack}) => {
+const RegisTwo = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <View style={styles.headerWrapper}>
-        {onBack && (
-         <TouchableOpacity onPress={onBack} activeOpacity={0.7}>
-           <View style={styles.back}>
-             
-          </View>
-        </TouchableOpacity>
-        
-      )}
-      <IconBack 
-      onPress={() => navigation.navigate('RegisOne')}
-      />
-      <Gap width={20} />
-      <Text style={styles.text}>{title}</Text>
-      
-      
-           
-        </View>
+      <View style={styles.headerWrapper}>  
+      <Gap width={15} />
+        <IconBack 
+        onPress={() => navigation.navigate('RegisOne')}
+        />
+        <Text style={styles.text}>Registration</Text>
+      </View>
+      <View style={styles.textInput}>
         <Gap height={30} />
-      <Text style={styles.text3}>Faculty</Text>
-      <TextInput mL={40} mR={40} placeholder='  Faculty of..'></TextInput>
-      <Gap height={30} />
-      <Text style={styles.text3}>Semester</Text>
-      <TextInput mL={40} mR={40} placeholder='  6th'></TextInput>
-      <Gap height={30} />
+        <TextInput title="Faculty" placeholder='  Faculty of..'></TextInput>
+        <Gap height={30} />
+        <TextInput title="Semester" placeholder='  6th'></TextInput>
+        <Gap height={30} />
+      </View>
+      
+      <View style={styles.position}>
       <Text style={styles.text3}>Position</Text>
       <RNPickerSelect
             placeholder={{
-              label: 'Student',
-              value: 'Student',
+              label: 'Select',
+              value: 'Select',
               
             }}
             onValueChange={(value) => console.log()}
             items={[
+                { label: 'Student', value: 'Student'},
                 { label: 'Lecturer', value: 'Lecturer' },
                 { label: 'Staff', value: 'Staff' },
             ]}
@@ -48,11 +40,15 @@ const RegisTwo = ({navigation, title='Registration', onBack}) => {
                 pickerSelectStyles.inputAndroid
             }
         />
-      
-      <Gap height={50} />
-      <Button mL={120} mR={120} title={'Next'} onPress={() => navigation.navigate('RegisThree')}>Next</Button>
-      <Gap height={25} />
-      <View style={styles.border1} />
+      </View>
+      <View style={styles.footer}>
+        <Button mL={120} mR={120} title={'Next'} onPress={() => navigation.navigate('RegisThree')}>Next</Button>
+        <Gap height={25} />
+        <View style={styles.progressBar}>
+          <View style={styles.border1} />
+          <View style={styles.border1} />
+        </View>
+      </View>
     </View>
   )
 }
@@ -63,6 +59,19 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    footer: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      marginBottom: 120,
+    },
+    textInput: {
+      marginLeft: 29,
+      marginRight: 41,
+    },
+    position: {
+      marginLeft: 29,
+      marginRight: 220,
+    },  
     headerWrapper: {
         backgroundColor: '#D3D3D380',
         paddingTop: 40,
@@ -77,19 +86,18 @@ const styles = StyleSheet.create({
         fontSize: 35, 
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 20
+        marginLeft: 14
     },
     text2: {
-        fontSize: 24,
+        fontSize: 15,
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 90
+        marginLeft: 26
     },
     text3: {
         fontSize: 15,
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 40
     },
     border: {
         left: 45,
@@ -99,11 +107,14 @@ const styles = StyleSheet.create({
     }, 
     border1: {
         left: 45,
-        width: 311,
+        width: 104,
         borderBottomWidth: 10,
         borderColor: '#554CCD',
         borderRadius: 10
     }, 
+  progressBar: {
+    flexDirection: 'row'
+  },
 })
 
 const pickerSelectStyles = StyleSheet.create({

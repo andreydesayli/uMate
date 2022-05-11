@@ -3,62 +3,71 @@ import React from 'react'
 import { Button, TextInput, Gap } from '../../components'
 import { IconBack, User } from '../../assets/icons'
 
-const RegisTwo = ({navigation, title='Registration', onBack}) => {
+const RegisTwo = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.headerWrapper}>
-        {onBack && (
-         <TouchableOpacity onPress={onBack} activeOpacity={0.7}>
-           <View style={styles.back}>
-             
-          </View>
-        </TouchableOpacity>
-        
-      )}
-      <IconBack 
-      onPress={() => navigation.navigate('RegisTwo')}
-      />
-      <Gap width={20} />
-      <Text style={styles.text}>{title}</Text>
-      
-      
-           
-        </View>
-        <Gap height={30} />
+        <Gap width={15} />
+        <IconBack 
+        onPress={() => navigation.navigate('RegisTwo')}
+        />
+        <Text style={styles.text}>Registration</Text>
+      </View>
+      <Gap height={30} />
       <Text style={styles.text3}>Describe yourself</Text>
       <TextInput mL={40} mR={40} pad={30} placeholder=' I am ...'></TextInput>
       <Gap height={30} />
       <Text style={styles.text3}>Interest</Text>
       <Gap height={10} />
-      <View style={{flexDirection: 'row', justifyContent: 'flex-start', marginLeft: 40}}>
-        <Button width={110} height={40} title='Photography'></Button>
+      <View style={styles.interest1}>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Photography</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={55} height={40} title='Tech'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Tech</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={55} height={40} title='Food'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Food</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={50} height={40} title='Art'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Art</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={80} height={40} title='Sports'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Sports</Text>
+        </TouchableOpacity>
       </View>
       <Gap height={5} />
       <View style={{flexDirection: 'row', justifyContent: 'flex-start', marginLeft: 40}}>
-        <Button width={70} height={40} title='Music'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Music</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={80} height={40} title='Gaming'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Gaming</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={80} height={40} title='Fashion'></Button>
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Fashion</Text>
+        </TouchableOpacity>
         <Gap width={2} />
-        <Button width={80} height={40} title='Travel'></Button>
-        
+        <TouchableOpacity>
+        <Text style={styles.interestText}>Travel</Text>
+        </TouchableOpacity>
       </View>
       
-      <TextInput mL={40} mR={220} placeholder=' Others'></TextInput>
-      <Gap height={40} />
-      <Button mL={120} mR={120} style={styles.button1} title={'Done'} onPress={() => navigation.navigate('SplashScreen')}>Next</Button>
+      <TextInput style={{height: 120}} mL={40} mR={220} placeholder=' Others'></TextInput>
+      <Gap height={90} />
+      <Button mL={120} mR={120} style={styles.button1} title={'Done'} onPress={() => navigation.navigate('tabsNav')}>Next</Button>
       <Gap height={25} />
-      <View style={styles.border1} />
-      
+      <View style={styles.progressBar}>
+        <View style={styles.border1} />
+        <View style={styles.border1} />
+        <View style={styles.border1} />
+      </View>
     </View>
     
   )
@@ -77,11 +86,26 @@ const styles = StyleSheet.create({
     back:{
         padding: 10,
     }, 
+    interestText: {
+      fontFamily: 'Roboto-Bold',
+      fontSize: 13,
+      color: 'white',
+      borderRadius: 17,
+      backgroundColor: '#554CCDCC',
+      paddingHorizontal: 10,
+      paddingVertical: 3,
+      height: 25
+    },
+    interest1: {
+      flexDirection: 'row', 
+      justifyContent: 'flex-start', 
+      marginLeft: 40,
+    },
     text: {
         fontSize: 35, 
         fontFamily: 'Roboto-Bold',
         color: 'black',
-        marginLeft: 20
+        marginLeft: 14,
     },
     text2: {
         fontSize: 24,
@@ -103,9 +127,12 @@ const styles = StyleSheet.create({
     }, 
     border1: {
         left: 45,
-        width: 311,
+        width: 104,
         borderBottomWidth: 10,
         borderColor: '#554CCD',
         borderRadius: 10
     }, 
+    progressBar: {
+      flexDirection: 'row'
+    }
 })

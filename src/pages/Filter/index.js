@@ -111,7 +111,7 @@ const Filter = ({navigation, onBack}) => {
       <Gap height={16} />
       <View style={{backgroundColor: "#FBF8FD"}}>
 
-        <Button mL={120} mR={120} mB={20} style={styles.button1} title={'Save'} onPress={() => navigation.navigate('SignIn')}>Next</Button>
+        <Button mL={120} mR={120} mB={20} style={styles.button1} title={'Save'} onPress={() => navigation.navigate('tabsNav')}>Next</Button>
       </View>
 
         
