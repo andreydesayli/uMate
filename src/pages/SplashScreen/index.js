@@ -1,33 +1,31 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, {useEffect} from 'react'
-import { Logo } from '../../assets/icons'
+import { Logo } from '../../assets'
 
 const SplashScreen = ({navigation}) => {
-    useEffect(() => {
-        setTimeout(() => {
-          navigation.replace('SignIn');
-        }, 3000);
-      }, []); 
+  useEffect(()=>{
+    setTimeout(()=>{
+      navigation.navigate('SignIn')
+    }, 3000)
+  },[])
   return (
-    <View style={styles.container}>
-      <Logo width={409} height={284} />
-      <Text style={styles.text}>UMate</Text>
-    </View> 
+    <View style={styles.page}>
+      <Logo/>
+      <Text style={styles.text}>Student Tracker</Text>
+    </View>
   )
 }
 
-export default SplashScreen;
+export default SplashScreen
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'white',
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      text: {
-          fontSize: 50,
-          color: '#E214C1',
-          fontFamily: 'Pacifico-Regular',
-      }
+  page: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }, 
+  text: {
+    fontSize: 32,
+    fontFamily: 'Poppins-Medium'
+  }
 })

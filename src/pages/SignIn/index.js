@@ -37,7 +37,7 @@ const SignIn = ({navigation}) => {
       <View style={styles.button}>
         <Button 
          title="Login"
-         onPress={() => navigation.navigate('tabsNav')}
+         onPress={() => navigation.navigate('Menu')}
         />
       </View>
     </View>

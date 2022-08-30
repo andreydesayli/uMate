@@ -1,86 +1,43 @@
 import React from 'react'
-import { SplashScreen, Filter, Home, SignIn, SignUp, RegisOne,
-   RegisTwo, RegisThree, ResetPass, ResetPassOne,
-  Settings, Privacy, Help, Report, Notification, Match, Chat } from '../pages'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import TabsNav from '../TabsNav';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SignIn, SplashScreen, Great, Menu, video, Notification } from '../pages';
+import Demo from '../pages/Demo';
+import Map from '../pages/mapsTest';
 
 const Stack = createNativeStackNavigator();
 
-const index = () => {
+const Router = () => {
   return (
-   <Stack.Navigator screenOptions={{ headerShown: false }}>    
-     <Stack.Screen
-         name="SplashScreen"
-         component={SplashScreen}
-       />
-       <Stack.Screen 
-         name="SignIn"
-         component={SignIn}
-       />
-        <Stack.Screen
-         name="Filter"
-         component={Filter} 
-       />
-       <Stack.Screen 
-        name="SignUp"
-        component={SignUp}
-       />
-       <Stack.Screen 
-        name="ResetPassOne"
-        component={ResetPassOne}
-       />
-     <Stack.Screen 
-        name="ResetPass"
-        component={ResetPass}
-       />
-     <Stack.Screen 
-        name="RegisOne"
-        component={RegisOne}
-       />
-     <Stack.Screen 
-        name="RegisTwo"
-        component={RegisTwo}
-       />
-     <Stack.Screen 
-        name="RegisThree"
-        component={RegisThree}
-       />
-     <Stack.Screen
-        name="tabsNav"
-        component={TabsNav}
-       />
-       <Stack.Screen
-        name="Settings"
-        component={Settings}
+        <Stack.Navigator>
+
+
+        <Stack.Screen name="SplashScreen" 
+        component={SplashScreen} 
+        options={{headerShown: false}} 
         />
-        <Stack.Screen
-        name="Privacy"
-        component={Privacy}
+        <Stack.Screen name="SignIn" 
+        component={SignIn} 
+        options={{headerShown: false}} 
         />
-        <Stack.Screen
-        name="Help"
-        component={Help}
+        {/* <Stack.Screen name="Great" 
+        component={Great} 
+        options={{headerShown: false}} 
+        /> */}
+        <Stack.Screen name="Menu" 
+        component={Menu} 
+        options={{headerShown: false}} 
         />
-        <Stack.Screen
-        name="Report"
-        component={Report}
-        />
-        <Stack.Screen
-        name="Notification"
-        component={Notification}
-        />
-        <Stack.Screen
-        name="Match"
-        component={Match}
-        />
-        <Stack.Screen
-        name="Chat"
-        component={Chat}
-        />
-   </Stack.Navigator>
+        <Stack.Screen name="Demo" 
+        component={Demo} 
+        options={{headerShown: false}} 
+        />    
+        <Stack.Screen name="Notification" 
+        component={Notification} 
+        options={{headerShown: false}} 
+        />    
+    </Stack.Navigator>
+    
   )
 }
 
-export default index
-
+export default Router

@@ -1,26 +1,15 @@
 import Logo from './Logo.svg';
-import Umate from './Umate.svg';
-import IconBack from './IconBack.svg';
+import Rectangle from './Rectangle.svg'
+import LogoSign from './LogoSign.svg'
+import Greatbutton from './great.svg'
+import RectPurple from './RectPurple.svg'
+import IconBack from './IconBack.svg'
 import User from './user.svg'
-import ResetInfo from './ResetInfo.svg'
-import Line from './Line.svg'
-import RadioChecked from './RadioChecked.svg'
-import RadioUnchecked from './RadioUnchecked.svg'
-import Plus from './Plus.svg'
-import Heart from './heart.png';
-import Close from './close.png';
-import iHome from './home.png';
-import iNotif from './notif.png';
-import iChat from './chat.png';
-import iProfile from './profile.png';
-import filter from './filter.png';
-import setting from './settings.png';
-import Delete from './delete.png';
-import Add from './add.png';
-import send from './send.png';
-import mic from './mic.png';
-import goBack from './goBack.png';
-import active from './Active.png';
-import IconMatch from './IconMatch.svg'
 
-export {IconMatch, Delete, Add,active, goBack, send, mic, setting, filter, iChat, iProfile, iNotif, iHome, Close, Logo, Plus, Umate, IconBack, User, ResetInfo, Line, RadioChecked, RadioUnchecked, Heart};
+export {Logo};
+export {Rectangle};
+export {LogoSign};
+export {Greatbutton};
+export {RectPurple};
+export {IconBack};
+export {User};
